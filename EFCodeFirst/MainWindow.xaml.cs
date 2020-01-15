@@ -24,5 +24,18 @@ namespace EFCodeFirst
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //var db = new OrderContext();
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine($"path    ={path}");
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
+        }
+
+        public void AccessDatabase()
+        {
+
+        }
     }
 }
