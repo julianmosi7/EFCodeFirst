@@ -1,0 +1,14 @@
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe.config
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.pdb
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\MainWindow.g.cs
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\App.g.cs
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst_MarkupCompile.cache
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst_MarkupCompile.lref
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\MainWindow.baml
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.g.resources
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Properties.Resources.resources
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.GenerateResource.cache
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.exe
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.pdb

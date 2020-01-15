@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirst", "EFCodeFirst\EFCodeFirst.csproj", "{2BD4CE88-69A5-4F71-99CB-2E14FF5746FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomModelLib", "CustomModelLib\CustomModelLib.csproj", "{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD4CE88-69A5-4F71-99CB-2E14FF5746FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD4CE88-69A5-4F71-99CB-2E14FF5746FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD4CE88-69A5-4F71-99CB-2E14FF5746FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD4CE88-69A5-4F71-99CB-2E14FF5746FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DFA700B-5A2E-47BA-A234-31B61F5828EA}
+	EndGlobalSection
+EndGlobal
