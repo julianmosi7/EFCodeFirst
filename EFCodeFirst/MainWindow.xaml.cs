@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBLibrary;
+using OrderViewModelLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,15 +29,27 @@ namespace EFCodeFirst
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //var db = new OrderContext();
+            Console.WriteLine("Setting Data Directory...");
             string path = AppDomain.CurrentDomain.BaseDirectory;
             Console.WriteLine($"path    ={path}");
             AppDomain.CurrentDomain.SetData("DataDirectory", path);
+
+            var db = new OrderContext();
+            var viewModel = new OrderViewModel(db);
+            DataContext = viewModel;
+            AccessDatabase(db);
         }
-
-        public void AccessDatabase()
+        
+        public void AccessDatabase(OrderContext db)
         {
-
+            try
+            {
+                int nr = db.Employees.Count();
+                Console.WriteLine($"Nr Employees = {nr}");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }            
         }
     }
 }

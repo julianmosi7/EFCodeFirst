@@ -1,0 +1,16 @@
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\obj\Debug\DBLibrary.csprojAssemblyReference.cache
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\obj\Debug\DBLibrary.csproj.CoreCompileInputs.cache
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\CustomModelLib.dll.config
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\CustomModelLib.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\CustomModelLib.pdb
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\EntityFramework.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\EntityFramework.SqlServer.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\System.Windows.Interactivity.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\EntityFramework.xml
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\EntityFramework.SqlServer.xml
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\bin\Debug\System.Windows.Interactivity.xml
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\obj\Debug\DBLibrary.csproj.CopyComplete
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\obj\Debug\CustomModelLib.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\CustomModelLib\obj\Debug\CustomModelLib.pdb
