@@ -13,6 +13,6 @@ namespace CustomModelLib
         public DateTime? OrderDate { get; set; }
         public virtual List<Customer> Customers { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
-        public virtual List<Shipment> Shipments { get; set; }
+        public virtual List<Shipment> Shipment { get; set; }
     }
 }

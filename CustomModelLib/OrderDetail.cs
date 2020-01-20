@@ -10,7 +10,7 @@ namespace CustomModelLib
     {
         public int Id { get; set; }
         public int Amount { get; set; }
-        public virtual List<Order> Orders { get; set; }
-        public virtual List<Product> Products { get; set; }
+        public virtual List<Order> Order { get; set; }
+        public virtual List<Product> Product { get; set; }
     }
 }

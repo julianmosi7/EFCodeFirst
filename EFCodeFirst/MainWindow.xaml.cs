@@ -34,7 +34,7 @@ namespace EFCodeFirst
             Console.WriteLine($"path    ={path}");
             AppDomain.CurrentDomain.SetData("DataDirectory", path);
 
-            var db = new OrderContext();
+            var db = new OrderContext("OrderContext");
             var viewModel = new OrderViewModel(db);
             DataContext = viewModel;
             AccessDatabase(db);

@@ -17,7 +17,7 @@ namespace DBLibrary
         public DbSet<Product> Products { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
 
-        public OrderContext() : base("OrderContext")
+        public OrderContext(string nameOrConnectionString) : base("OrderContext")
         {
             
         }
