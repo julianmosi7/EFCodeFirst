@@ -35,3 +35,6 @@ C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\o
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\obj\Debug\OrderViewModelLib.csproj.CopyComplete
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\obj\Debug\DBViewModel.dll
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\obj\Debug\DBViewModel.pdb
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.pdb

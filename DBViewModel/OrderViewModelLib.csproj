@@ -43,6 +43,8 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,12 +57,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Tools\MVVM.Tools\MVVM.Tools.csproj">
+      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
+      <Name>MVVM.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CustomModelLib\DBLibrary.csproj">
       <Project>{e3a307cb-3e97-405b-b6fd-3fda9ae10eaf}</Project>
       <Name>DBLibrary</Name>

@@ -23,18 +23,38 @@ namespace CustomModelLib
         private static void Seed(OrderContext db)
         {
             Console.WriteLine($"---{MethodBase.GetCurrentMethod().Name}");
-            var customerA = new Customer { Name = "Hansi", Longitude = 12, Latitude = 48 };
-            var customerB = new Customer { Name = "Susi", Longitude = 13, Latitude = 47 };
-            var employeeA = new Employee { Firstname = "Heinzi", Lastname = "Lehner" };
-            var employeeB = new Employee { Firstname = "Pauli", Lastname = "Berger" };
-            var orderX = new Order { Description = "Auftrag X", Customer = customerA };
-            var orderY = new Order { Description = "Auftrag Y", Customer = customerB };
+            var customerA = new Customer { Name = "Firma Berger", Longitude = 48.3352f, Latitude = 14.5324f };
+            var customerB = new Customer { Name = "Fam. Lehner", Longitude = 48.5136f, Latitude = 14.1902f };
+            var employeeA = new Employee { Firstname = "Hansi", Lastname = "Huber" };
+            var employeeB = new Employee { Firstname = "Susi", Lastname = "Maier" };
+            var employeeC = new Employee { Firstname = "Fritzi", Lastname = "Müller" };
+            var employeeD = new Employee { Firstname = "Franzi", Lastname = "Hehenberger" };
+            var employeeE = new Employee { Firstname = "Pauli", Lastname = "Gruber" };
+            var employeeF = new Employee { Firstname = "Elfi", Lastname = "Gerber" };
+            var employeeG = new Employee { Firstname = "Maxi", Lastname = "Moser" };
+            var productA = new Product { Weight = 43, Price = 19, Description = "Platten A" };
+            var productB = new Product { Weight = 46, Price = 22, Description = "Platten C" };
+            var productC = new Product { Weight = 52, Price = 31, Description = "Platten B" };
+            var productD = new Product { Weight = 2, Price = 10, Description = "Isolierung B" };
+            var productE = new Product { Weight = 2, Price = 11, Description = "Isolierung C" };
+            var productF = new Product { Weight = 1, Price = 8, Description = "Isolierung D" };
+            var productG = new Product { Weight = 3, Price = 12, Description = "Isolierung A" };
             db.Customers.Add(customerA);
             db.Customers.Add(customerB);
             db.Employees.Add(employeeA);
             db.Employees.Add(employeeB);
-            db.Orders.Add(orderX);
-            db.Orders.Add(orderY);
+            db.Employees.Add(employeeC);
+            db.Employees.Add(employeeD);
+            db.Employees.Add(employeeE);
+            db.Employees.Add(employeeF);
+            db.Employees.Add(employeeG);
+            db.Products.Add(productA);
+            db.Products.Add(productB);
+            db.Products.Add(productC);
+            db.Products.Add(productD);
+            db.Products.Add(productE);
+            db.Products.Add(productF);
+            db.Products.Add(productG);
         }
 
         private static void AssertDatabase(OrderContext db)

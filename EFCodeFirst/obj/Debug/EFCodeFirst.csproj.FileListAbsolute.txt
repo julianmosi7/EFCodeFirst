@@ -57,3 +57,6 @@ C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\b
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\bin\Debug\Microsoft.Expression.Interactions.xml
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\bin\Debug\System.Windows.Interactivity.xml
 C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.CopyComplete
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\MVVM.Tools.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\MVVM.Tools.pdb

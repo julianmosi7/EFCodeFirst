@@ -12,11 +12,6 @@ namespace CustomModelLib
         public string Name { get; set; }
         public float Latitude { get; set; }
         public float Longitude { get; set; }
-        public virtual List<Order> Orders { get; set; }
-
-        public static implicit operator List<object>(Customer v)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual List<Order> Orders { get; set; }        
     }
 }

@@ -6,9 +6,15 @@
         xmlns:iact="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:expr="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:local="clr-namespace:EFCodeFirst"
+        xmlns:orderviewmodellib="clr-namespace:OrderViewModelLib;assembly=DBViewModel"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.DataContext>
+        <orderviewmodellib:OrderViewModel/>
+    </Window.DataContext>    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"></RowDefinition>
@@ -33,9 +39,15 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Content="Lieferdatum:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+            <Label Content="Lieferdatum:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                <iact:Interaction.Triggers>
+                    <iact:EventTrigger EventName="MouseEnter">
+                        <expr:CallMethodAction TargetObject="{Binding}" MethodName="CallMethodAction"></expr:CallMethodAction>
+                    </iact:EventTrigger>
+                </iact:Interaction.Triggers>
+            </Label>
             <TextBox Grid.Row="0" Grid.Column="1"/>
-            <Button Content="Mitarbeiter zuweisen" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                <Button Content="Mitarbeiter zuweisen" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="3">
@@ -44,6 +56,9 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="10*"></RowDefinition>
             </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding SelectedEmployee}" SpellCheck.IsEnabled="True"></TextBox>
+            <ListBox Grid.Row="2" Grid.Column="3" ItemsSource="{Binding Employees}"></ListBox>
         </Grid>
 
         <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
