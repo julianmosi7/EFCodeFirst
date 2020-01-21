@@ -11,8 +11,8 @@ namespace CustomModelLib
         public int Id { get; set; }
         public string Description { get; set; }
         public DateTime? OrderDate { get; set; }
-        public virtual List<Customer> Customers { get; set; }
+        public virtual Customer Customer { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
-        public virtual List<Shipment> Shipment { get; set; }
+        public virtual Shipment Shipment { get; set; }
     }
 }

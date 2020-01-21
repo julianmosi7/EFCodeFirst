@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="DbSeeder.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderContext.cs" />

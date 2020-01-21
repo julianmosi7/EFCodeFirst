@@ -12,7 +12,7 @@ namespace CustomModelLib
         public int SequenceNr { get; set; }
         public DateTime? PlanDate { get; set; }
         public DateTime? DeliverDate { get; set; }
-        public virtual List<Employee> Employee { get; set; }
+        public virtual Employee Employee { get; set; }
         public virtual List<Order> Orders { get; set; }
     }
 }

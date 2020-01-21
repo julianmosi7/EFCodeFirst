@@ -1,4 +1,5 @@
-﻿using DBLibrary;
+﻿using CustomModelLib;
+using DBLibrary;
 using OrderViewModelLib;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace EFCodeFirst
             Console.WriteLine($"path    ={path}");
             AppDomain.CurrentDomain.SetData("DataDirectory", path);
 
-            var db = new OrderContext("OrderContext");
+            var db = new OrderContext("OrderContext").SeedIfEmpty();
             var viewModel = new OrderViewModel(db);
             DataContext = viewModel;
             AccessDatabase(db);
