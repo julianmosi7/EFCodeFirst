@@ -60,3 +60,4 @@ C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\EFCodeFirst\o
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\MVVM.Tools.dll
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\MVVM.Tools.pdb
+D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\EFCodeFirst\bin\Debug\MVVM.Tools.dll.config

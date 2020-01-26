@@ -12,9 +12,8 @@ namespace CustomModelLib
     {
         public static OrderContext SeedIfEmpty(this OrderContext db)
         {
-            Console.WriteLine($"---{MethodBase.GetCurrentMethod().Name}");
             AssertDatabase(db);
-            if (db.Employees.Any()) return db;
+            if (db.Orders.Any()) return db;
             Seed(db);
             db.SaveChanges();
             return db;
@@ -59,19 +58,11 @@ namespace CustomModelLib
 
         private static void AssertDatabase(OrderContext db)
         {
-            Console.WriteLine("---AssertDatabase---");
-            bool dbExists = db.Database.Exists();
-            if (dbExists)
+            if (db.Database.Exists())
             {
-                Console.WriteLine($"Database exists: {db.Database.Connection.ConnectionString}");
-                bool dbStructureOK = db.Database.CompatibleWithModel(true);
-                Console.WriteLine($"Structure still the same? {dbStructureOK}");
-                if (dbStructureOK) return;
-
-                Console.WriteLine("Delete the database");
+                if (db.Database.CompatibleWithModel(true)) return;
                 db.Database.Delete();
             }
-            Console.WriteLine("Create the database with actual configuration");
             db.Database.Create();
         }
     }

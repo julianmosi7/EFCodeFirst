@@ -28,17 +28,23 @@ namespace EFCodeFirst
             InitializeComponent();
         }
 
+        private OrderContext db;
+        private OrderViewModel viewModel;    
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Setting Data Directory...");
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            Console.WriteLine($"path    ={path}");
-            AppDomain.CurrentDomain.SetData("DataDirectory", path);
-
-            var db = new OrderContext("OrderContext").SeedIfEmpty();
-            var viewModel = new OrderViewModel(db);
+            ConnectionString();
+            db = new OrderContext("OrderContext").SeedIfEmpty();
+            viewModel = new OrderViewModel(db);
             DataContext = viewModel;
             AccessDatabase(db);
+            LoadTree();
+        }        
+
+        private void ConnectionString()
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
         }
         
         public void AccessDatabase(OrderContext db)
@@ -51,6 +57,31 @@ namespace EFCodeFirst
             {
                 MessageBox.Show(ex.ToString());
             }            
+        }
+
+        private void LoadTree()
+        {
+            TreeViewItem root = new TreeViewItem();
+            root.Header = "Kunden";
+            treeView.Items.Add(root);
+            List<Customer> customers = db.Customers.ToList();
+            List<Order> orders = db.Orders.ToList();
+                        
+            foreach (var item in customers.Select(x => x.Name).ToList())
+            {
+                TreeViewItem child = new TreeViewItem();
+                child.Header = item;
+                root.Items.Add(child);
+
+                foreach (var item2 in orders.Where(x => x.Customer.Name == item).ToList())
+                {
+                    if (item2 == null) return;
+                    TreeViewItem grandchild = new TreeViewItem();
+                    grandchild.Header = item2;
+                    child.Items.Add(grandchild);
+                }               
+                
+            }
         }
     }
 }

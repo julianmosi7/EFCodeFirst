@@ -112,6 +112,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Tools\MVVM.Tools\MVVM.Tools.csproj">
+      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
+      <Name>MVVM.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CustomModelLib\DBLibrary.csproj">
       <Project>{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}</Project>
       <Name>DBLibrary</Name>
