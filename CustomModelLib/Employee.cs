@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomModelLib
 {
-    public class Employee
+    public partial class Employee
     {
         public int Id { get; set; }
         public string Firstname { get; set; }

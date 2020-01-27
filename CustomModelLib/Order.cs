@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomModelLib
 {
-    public class Order
+    public partial class Order
     {
         public int Id { get; set; }
         public string Description { get; set; }

@@ -12,12 +12,13 @@ namespace CustomModelLib
     {
         public static OrderContext SeedIfEmpty(this OrderContext db)
         {
+            DeleteCompletely(db);
             AssertDatabase(db);
             if (db.Orders.Any()) return db;
             Seed(db);
             db.SaveChanges();
             return db;
-        }
+        }       
 
         private static void Seed(OrderContext db)
         {
@@ -38,6 +39,15 @@ namespace CustomModelLib
             var productE = new Product { Weight = 2, Price = 11, Description = "Isolierung C" };
             var productF = new Product { Weight = 1, Price = 8, Description = "Isolierung D" };
             var productG = new Product { Weight = 3, Price = 12, Description = "Isolierung A" };
+            var orderA = new Order { Customer = customerB, OrderDate = new DateTime(2018, 01, 30), Description="Hausisolierung 33"};
+            var orderB = new Order { Customer = customerB, OrderDate = new DateTime(2018, 02, 06), Description="Hausisolierung 32"};
+            var orderC = new Order { Customer = customerA, OrderDate = new DateTime(2018, 02, 05), Description="Plattenlieferung 1"};
+            var orderDetailA = new OrderDetail { Order = orderA, Amount = 30, Product = productC};
+            var orderDetailB = new OrderDetail { Order = orderB, Amount = 60, Product = productD };
+            var orderDetailC = new OrderDetail { Order = orderB, Amount = 20, Product = productE };
+            var orderDetailD = new OrderDetail { Order = orderB, Amount = 20, Product = productF };
+            var orderDetailE = new OrderDetail { Order = orderC, Amount = 15, Product = productA };
+            var orderDetailF = new OrderDetail { Order = orderC, Amount = 20, Product = productB };
             db.Customers.Add(customerA);
             db.Customers.Add(customerB);
             db.Employees.Add(employeeA);
@@ -54,6 +64,15 @@ namespace CustomModelLib
             db.Products.Add(productE);
             db.Products.Add(productF);
             db.Products.Add(productG);
+            db.Orders.Add(orderA);
+            db.Orders.Add(orderB);
+            db.Orders.Add(orderC);
+            db.OrderDetails.Add(orderDetailA);
+            db.OrderDetails.Add(orderDetailB);
+            db.OrderDetails.Add(orderDetailC);
+            db.OrderDetails.Add(orderDetailD);
+            db.OrderDetails.Add(orderDetailE);
+            db.OrderDetails.Add(orderDetailF);
         }
 
         private static void AssertDatabase(OrderContext db)
@@ -63,6 +82,12 @@ namespace CustomModelLib
                 if (db.Database.CompatibleWithModel(true)) return;
                 db.Database.Delete();
             }
+            db.Database.Create();
+        }
+
+        private static void DeleteCompletely(OrderContext db)
+        {
+            db.Database.Delete();
             db.Database.Create();
         }
     }

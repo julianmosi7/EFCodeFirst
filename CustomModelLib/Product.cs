@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomModelLib
 {
-    public class Product
+    public partial class Product
     {
         public int Id { get; set; }
         public double Weight { get; set; }

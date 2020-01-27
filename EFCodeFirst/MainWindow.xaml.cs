@@ -4,17 +4,9 @@ using OrderViewModelLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EFCodeFirst
 {
@@ -29,34 +21,36 @@ namespace EFCodeFirst
         }
 
         private OrderContext db;
-        private OrderViewModel viewModel;    
+        private OrderViewModel viewModel;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             ConnectionString();
             db = new OrderContext("OrderContext").SeedIfEmpty();
             viewModel = new OrderViewModel(db);
+            db.Configuration.ProxyCreationEnabled = false;
             DataContext = viewModel;
             AccessDatabase(db);
             LoadTree();
-        }        
+        }
 
         private void ConnectionString()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
             AppDomain.CurrentDomain.SetData("DataDirectory", path);
         }
-        
+
         public void AccessDatabase(OrderContext db)
         {
             try
             {
                 int nr = db.Employees.Count();
                 Console.WriteLine($"Nr Employees = {nr}");
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }            
+            }
         }
 
         private void LoadTree()
@@ -65,23 +59,36 @@ namespace EFCodeFirst
             root.Header = "Kunden";
             treeView.Items.Add(root);
             List<Customer> customers = db.Customers.ToList();
-            List<Order> orders = db.Orders.ToList();
-                        
             foreach (var item in customers.Select(x => x.Name).ToList())
             {
                 TreeViewItem child = new TreeViewItem();
                 child.Header = item;
                 root.Items.Add(child);
 
-                foreach (var item2 in orders.Where(x => x.Customer.Name == item).ToList())
+                foreach (var item2 in db.Orders.Where(x => x.Customer.Name == item).ToList())
                 {
-                    if (item2 == null) return;
                     TreeViewItem grandchild = new TreeViewItem();
                     grandchild.Header = item2;
                     child.Items.Add(grandchild);
-                }               
-                
+
+                    foreach (var item3 in db.OrderDetails.Where(x => x.Order.Description == item2.Description).ToList())
+                    {
+                        TreeViewItem furthergrandchild = new TreeViewItem();
+                        furthergrandchild.Header = item3;
+                        grandchild.Items.Add(furthergrandchild);
+                    }
+                }
             }
+        }
+
+        private void ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var listBoxItem = sender as ListBoxItem;
+            var item = listBoxItem?.Content as string;
+            Console.WriteLine(item);
+            if (item == null) return;
+            viewModel.EnteredEmployee = item;
         }
     }
 }
+
