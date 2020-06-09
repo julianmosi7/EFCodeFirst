@@ -26,7 +26,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TreeView Name="treeView" Grid.Row="0" Grid.Column="0" />
+        <TreeView Name="treeView" Grid.Row="0" Grid.Column="0" SelectedItemChanged="treeView_SelectedItemChanged"/>
 
         <Grid Grid.Row="0" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -48,10 +48,10 @@
                     </iact:EventTrigger>
                 </iact:Interaction.Triggers>
             </Label>
-            <TextBox Grid.Row="0" Grid.Column="1"/>
+            <DatePicker Grid.Row="0" Grid.Column="1" DataContext="{Binding PlanDate}" />
             <Label Content="Mitarbeiter:" Grid.Row="1" Grid.Column="0"></Label>
             <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EnteredEmployee}" SpellCheck.IsEnabled="True" ></TextBox>
-            <Button Content="Mitarbeiter zuweisen" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            <Button Content="Set Employee" Command="{Binding AddShipmentToEmployee, Mode=OneWay}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="3">
@@ -62,12 +62,10 @@
             </Grid.RowDefinitions>
 
            
-            <ListBox Name="listBox" Grid.Row="2" Grid.Column="3" ItemsSource="{Binding Employees}" IsSynchronizedWithCurrentItem="True" MouseDoubleClick="ListBox_MouseDoubleClick"></ListBox>
+            <ListBox Name="listBox" Grid.Row="2" Grid.Column="3" ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}" IsSynchronizedWithCurrentItem="True" MouseDoubleClick="ListBox_MouseDoubleClick"></ListBox>
         </Grid>
 
-        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
-            
-        </DataGrid>
+        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding Shipments}"/>
 
 
     </Grid>

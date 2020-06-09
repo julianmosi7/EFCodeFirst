@@ -11,6 +11,6 @@ namespace CustomModelLib
         public int Id { get; set; }
         public string Firstname { get; set; }
         public string  Lastname { get; set; }
-        public virtual List<Order> Shipments { get; set; }
+        public virtual List<Shipment> Shipments { get; set; }
     }
 }

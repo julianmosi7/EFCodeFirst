@@ -39,3 +39,7 @@ D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.dl
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.pdb
 D:\Schule\4.Klasse\POS\Project16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.dll.config
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.dll
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.pdb
+C:\Users\mosha\Documents\Schule\4.Klasse\POS\Projekt16\EFCodeFirst\DBViewModel\bin\Debug\MVVM.Tools.dll.config

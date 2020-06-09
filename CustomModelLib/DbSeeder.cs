@@ -25,13 +25,14 @@ namespace CustomModelLib
             Console.WriteLine($"---{MethodBase.GetCurrentMethod().Name}");
             var customerA = new Customer { Name = "Firma Berger", Longitude = 48.3352f, Latitude = 14.5324f };
             var customerB = new Customer { Name = "Fam. Lehner", Longitude = 48.5136f, Latitude = 14.1902f };
-            var employeeA = new Employee { Firstname = "Hansi", Lastname = "Huber" };
+            var employeeA = new Employee { Firstname = "Hansi", Lastname = "Huber"};
             var employeeB = new Employee { Firstname = "Susi", Lastname = "Maier" };
             var employeeC = new Employee { Firstname = "Fritzi", Lastname = "Müller" };
             var employeeD = new Employee { Firstname = "Franzi", Lastname = "Hehenberger" };
             var employeeE = new Employee { Firstname = "Pauli", Lastname = "Gruber" };
             var employeeF = new Employee { Firstname = "Elfi", Lastname = "Gerber" };
             var employeeG = new Employee { Firstname = "Maxi", Lastname = "Moser" };
+            var shipmentA = new Shipment { Employee = employeeA, DeliverDate = new DateTime(2017, 01, 23), PlanDate = new DateTime(2037, 02, 25), SequenceNr=3 };
             var productA = new Product { Weight = 43, Price = 19, Description = "Platten A" };
             var productB = new Product { Weight = 46, Price = 22, Description = "Platten C" };
             var productC = new Product { Weight = 52, Price = 31, Description = "Platten B" };
@@ -57,6 +58,7 @@ namespace CustomModelLib
             db.Employees.Add(employeeE);
             db.Employees.Add(employeeF);
             db.Employees.Add(employeeG);
+            db.Shipments.Add(shipmentA);
             db.Products.Add(productA);
             db.Products.Add(productB);
             db.Products.Add(productC);

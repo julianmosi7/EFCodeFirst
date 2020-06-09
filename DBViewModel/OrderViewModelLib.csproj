@@ -64,13 +64,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Tools\MVVM.Tools\MVVM.Tools.csproj">
-      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
-      <Name>MVVM.Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CustomModelLib\DBLibrary.csproj">
       <Project>{e3a307cb-3e97-405b-b6fd-3fda9ae10eaf}</Project>
       <Name>DBLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVVM.Tools\MVVM.Tools.csproj">
+      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
+      <Name>MVVM.Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

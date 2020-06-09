@@ -1,5 +1,6 @@
 ﻿using CustomModelLib;
 using DBLibrary;
+using MVVM.Tools;
 using OrderViewModelLib;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace EFCodeFirst
 {
@@ -83,12 +85,45 @@ namespace EFCodeFirst
 
         private void ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var listBoxItem = sender as ListBoxItem;
-            var item = listBoxItem?.Content as string;
-            Console.WriteLine(item);
-            if (item == null) return;
+            if (e.ChangedButton != MouseButton.Left) return;
+            var ele = listBox.InputHitTest(e.GetPosition(listBox));
+            var listboxItem = GetListBoxItem(ele as DependencyObject);
+            if (listboxItem == null) return;
+            string item = listboxItem.Content.ToString();
+
             viewModel.EnteredEmployee = item;
         }
+
+        private ListBoxItem GetListBoxItem(DependencyObject ele)
+        {
+            while(ele != null && !(ele is ListBoxItem))
+            {
+                ele = VisualTreeHelper.GetParent(ele);
+            }
+            return ele as ListBoxItem;
+        }
+
+        private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        { 
+            var ele = e.OriginalSource as DependencyObject;
+            var treeViewItem = GetTreeViewItem(ele as DependencyObject);
+            if (treeViewItem.Header.GetType().Name.StartsWith("Order"))
+            {
+                Order item = treeViewItem.Header as Order;
+                viewModel.SelectedOrders = db.Orders.FirstOrDefault(x => x.Id == item.Id);
+            }
+            
+        }
+
+        private TreeViewItem GetTreeViewItem(DependencyObject ele)
+        {
+            while(ele != null && !(ele is TreeViewItem))
+            {
+                ele = VisualTreeHelper.GetParent(ele);
+            }
+            return ele as TreeViewItem;
+        }
+
     }
 }
 

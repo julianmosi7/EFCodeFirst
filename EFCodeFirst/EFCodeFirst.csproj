@@ -112,10 +112,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Tools\MVVM.Tools\MVVM.Tools.csproj">
-      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
-      <Name>MVVM.Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CustomModelLib\DBLibrary.csproj">
       <Project>{E3A307CB-3E97-405B-B6FD-3FDA9AE10EAF}</Project>
       <Name>DBLibrary</Name>
@@ -123,6 +119,10 @@
     <ProjectReference Include="..\DBViewModel\OrderViewModelLib.csproj">
       <Project>{2914489a-95ca-40dc-b9e7-9a5bb34fd554}</Project>
       <Name>OrderViewModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVVM.Tools\MVVM.Tools.csproj">
+      <Project>{98d33b68-ead1-4280-99d7-b9bc03dad05e}</Project>
+      <Name>MVVM.Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
